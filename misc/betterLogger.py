@@ -13,3 +13,4 @@ class BetterLogger:
     def log_critical(self, *args):
         _Logger.critical(str(self.__name__) + ": " + "".join([str(arg) for arg in args]))
 
+

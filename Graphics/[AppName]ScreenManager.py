@@ -6,3 +6,4 @@ class [AppName]ScreenManager(ScreenManager, BetterLogger):
         self.current = screen_name
 
         self.log_info("Switched to " + str(screen_name))
+
