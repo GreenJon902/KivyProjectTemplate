@@ -5,7 +5,7 @@ from kivy.factory import Factory
 from kivy.lang import Builder
 
 import AppInfo
-from Graphics.[AppName] import [AppName]
+from Graphics.[appName] import [AppName]
 
 
 def load_kv():
@@ -17,6 +17,7 @@ def load_kv():
 
 def setup():
     from Graphics.Screens.exampleScreen import ExampleScreen
+    from Graphics.[appName]ScreenManager import [AppName]ScreenManager
 
 
     Factory.register("DrawSwapScreenManager", cls=[AppName]ScreenManager)
