@@ -1,0 +1,91 @@
+#:import AppInfo AppInfo
+
+<PreLoadScreenManager>:
+    id: space_builder_merge_game_screen_manager
+
+    Screen:
+        id: dummy_screen
+        name: "DummyScreen"
+        manager: "space_builder_merge_game_screen_manager"
+
+    SplashScreen:
+        id: splash_screen
+        name: "SplashScreen"
+        manager: "space_builder_merge_game_screen_manager"
+
+
+    LoadingScreen:
+        id: loading_screen
+        name: "LoadingScreen"
+        manager: "space_builder_merge_game_screen_manager"
+
+
+<SplashScreen>:
+    show_time: 1
+
+    Label:
+        text: "Hello"
+
+
+<LoadingScreen>:
+    loadingScreenShowAnimationLength: 0.75
+
+    FloatLayout:
+        id: content
+
+        opacity: 0
+
+        AsyncImage:
+            #source: AppInfo.loading_screen_background_image
+            allow_stretch: True
+            keep_ratio: True
+
+            size_hint_y: None
+            size_hint_x: None
+            width: self.parent.width
+            height: self.parent.width/self.image_ratio
+
+        AsyncImage:
+            #source: AppInfo.loading_screen_title_image
+            allow_stretch: True
+            keep_ratio: True
+
+            size_hint_y: None
+            size_hint_x: None
+            width: self.parent.width / 1.5
+            height: self.parent.width / 1.5 / self.image_ratio
+
+            pos_hint: {"x": 0, "top": 1}
+
+        Label:
+            id: loading_label
+            text: "Loading..."
+            #font_name: AppInfo.loading_screen_loading_text_font
+            font_size: "30sp"
+
+            size_hint_x: 1
+            size_hint_y: 0
+            pos_hint: {"center_x": 0.5}
+            top: loading_bar.y
+
+        Label:
+            id: loading_label_2
+            text: ""
+            #font_name: AppInfo.loading_screen_loading_text_font
+            font_size: "15sp"
+
+            size_hint_x: 1
+            size_hint_y: 0
+            pos_hint: {"center_x": 0.5}
+            y: "15sp"
+
+        ProgressBar:
+            id: loading_bar
+
+            max: 1000
+            value: 0
+
+            size_hint_x: 0.8
+            size_hint_y: 0.05
+
+            pos_hint: {"center_x": 0.5, "y": 0.1}

@@ -1,0 +1,8 @@
+{
+  "General": {
+    "Title": "APP_NAME_",
+    "NoTextId": "No text id was given",
+    "InvalidTextId": "Text ID is invalid",
+    "ExampleText": "Hello World!"
+  }
+}

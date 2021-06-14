@@ -1,0 +1,11 @@
+{
+  "debug": {
+    "log_level": "info"
+  },
+
+  "UI": {
+    "language": "en-gb",
+    "volume": 0.1
+  },
+  "time_between_save": 60
+}
