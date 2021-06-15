@@ -22,7 +22,7 @@ class GlobalEvents:
             cls.check_binding(event_name)
 
             cls.bindings[event_name].append(function)
-            logger.log_deep_debug(function, "was bound to event '", event_name, "'")
+            logger.log_debug(function, "was bound to event '", event_name, "'")
 
     @classmethod
     def register(cls, event_name: str):
